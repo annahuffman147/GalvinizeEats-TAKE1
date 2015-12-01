@@ -11,7 +11,7 @@ function printMenuItems (data) {
     "</div>");
     $div.click(function(){
       console.log(menuItems);
-      $('#items').append(event.target);
+      $('.menuItem').css('background-color', 'grey');
       // $('this.menuItems').append(menuItems[i].price)
     })
     $('#displayMenu').append($div)
@@ -24,7 +24,7 @@ var $quantity = $("<form>" +
     "<input type='number' name='quantity' min='0' max='5'>" +
     "</form>"
 );
-console.log($quantity);
+
 // $(document).ready(function(){
 //   $('.menuItem').on('click', function(event){
 //     console.log(true);
