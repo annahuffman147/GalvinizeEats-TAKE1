@@ -11,7 +11,7 @@ function printMenuItems (data) {
     "</div>");
     $div.click(function(){
       console.log(menuItems);
-      $('#items').add(event.target);
+      $('#items').append(event.target);
       // $('this.menuItems').append(menuItems[i].price)
     })
     $('#displayMenu').append($div)
