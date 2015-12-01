@@ -1,0 +1,27 @@
+#comboItemPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuItem {
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.menuPrices {
+  text-align: right;
+  font-family: serif;
+}
+
+#orderSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.selections {
+  min-width: 200px;
+  flex-grow: 1;
+}
+aside {
+  flex-grow: 2;
+}

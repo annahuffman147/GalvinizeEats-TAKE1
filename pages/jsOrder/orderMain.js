@@ -1,37 +1,25 @@
-function pullData(){
-  var menuFull = new XMLHttpRequest();
-  menuFull.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      var menuListings = console.log(this.responseText);
-    }
-  }
-  menuFull.open('GET', 'https://galvanize-eats-api.herokuapp.com/menu');
-  menuFull.send();
+$.get('https://galvanize-eats-api.herokuapp.com/menu', printMenuItems);
+
+function printMenuItems (data) {
+	var menuItems = data.menu;
+  var menuPrices = data.price;
+	for (var i=0; i<menuItems.length; i++) {
+		console.log(menuItems[i].name, menuItems[i].price);
+    $('#menuItem0').text(menuItems[0].name);
+    $('#menuPrices0').text(menuItems[0].price);
+    $('#menuItem1').text(menuItems[1].name);
+    $('#menuPrices1').text(menuItems[1].price);
+    $('#menuItem2').text(menuItems[2].name);
+    $('#menuPrices2').text(menuItems[2].price);
+    $('#menuItem3').text(menuItems[3].name);
+    $('#menuPrices3').text(menuItems[3].price);
+    $('#menuItem4').text(menuItems[4].name);
+    $('#menuPrices4').text(menuItems[4].price);
+	}
 }
-pullData()
 
-
-
-function displayMenuItems(){
-  for (var i=0; i<menu.length; i++) {
-    var menuItem = pullData.menu[i].name
-      console.log(menuItem[i]);
-  // var menuPrice = data.menu.price
-  // $('#temperature').text(temperature)
-  // $('#largeTemp').text(temperature)
+function menuItems (data){
+  var temperature = data.query.results.channel.item.condition.temp
+  $('#temperature').text(temperature)
+  $('#largeTemp').text(temperature)
 };
-// displayMenuItems()
-//
-// function display() {
-//   displayMenuItems()
-// }
-// display()
-
-
-
-// function displayMenuItems (){
-//   var menuItems = menuListings.data.menu.name
-//   var menuPrices = data.menu.price
-//   console.log(menuItems);
-//   console.log(menuPrices);
-// }
