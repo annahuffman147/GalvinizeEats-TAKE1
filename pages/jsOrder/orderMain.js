@@ -10,24 +10,24 @@ function printMenuItems (data) {
     "<p class='menuPrices' id='menuPrices'>" + menuItems[i].price + "</p>" +
     "</div>");
     $div.click(function(){
-      console.log('item was clicked');
+      console.log(menuItems);
+      $('#items').add(event.target);
+      // $('this.menuItems').append(menuItems[i].price)
     })
     $('#displayMenu').append($div)
-    // $('#menuItem0').text(menuItems[0].name);
-    // $('#menuPrices0').text(menuItems[0].price);
-    // $('#menuItem1').text(menuItems[1].name);
-    // $('#menuPrices1').text(menuItems[1].price);
-    // $('#menuItem2').text(menuItems[2].name);
-    // $('#menuPrices2').text(menuItems[2].price);
-    // $('#menuItem3').text(menuItems[3].name);
-    // $('#menuPrices3').text(menuItems[3].price);
-    // $('#menuItem4').text(menuItems[4].name);
-    // $('#menuPrices4').text(menuItems[4].price);
 	}
 }
 
-function menuItems (data){
-  var temperature = data.query.results.channel.item.condition.temp
-  $('#temperature').text(temperature)
-  $('#largeTemp').text(temperature)
-};
+
+var $quantity = $("<form>" +
+    "Quantity (between 0 and 5):" +
+    "<input type='number' name='quantity' min='0' max='5'>" +
+    "</form>"
+);
+console.log($quantity);
+// $(document).ready(function(){
+//   $('.menuItem').on('click', function(event){
+//     console.log(true);
+//     // var temperature = data.query.results.channel.item.condition.temp;
+//     console.log($("#temperature").text());
+//   });

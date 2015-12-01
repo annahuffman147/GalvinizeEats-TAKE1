@@ -16,16 +16,28 @@
 #orderSection {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .selections {
-  min-width: 200px;
-  flex-grow: 1;
+  min-width: 100px;
+  background-color: tan;
+  padding: 2em;
 }
 aside {
+  display: flex;
+  flex-direction: row;
   flex-grow: 2;
+  background-color: #ffcc66;
+  padding: 2em;
 }
 .contactInfo {
   display: flex;
   flex-direction: column;
+}
+.currentOrder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
