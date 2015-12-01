@@ -25,3 +25,7 @@
 aside {
   flex-grow: 2;
 }
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
